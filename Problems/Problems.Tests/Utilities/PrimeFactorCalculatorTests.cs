@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using NUnit.Framework;
 using Problems.Utilities;
 
@@ -15,9 +14,9 @@ namespace Problems.Tests.Utilities
             solution = PrimeFactorCalculator.GetLargestPrimeFactor(21);
             Assert.AreEqual(7, solution);
             solution = PrimeFactorCalculator.GetLargestPrimeFactor(81);
-            Assert.AreEqual(27, solution);
+            Assert.AreEqual(3, solution);
             solution = PrimeFactorCalculator.GetLargestPrimeFactor(2);
-            Assert.AreEqual(1, solution);
+            Assert.AreEqual(2, solution);
         }
 
         [Test]
@@ -34,6 +33,14 @@ namespace Problems.Tests.Utilities
             long solution = PrimeFactorCalculator.GetLargestPrimeFactor(13195);
 
             Assert.AreEqual(29, solution);
+        }
+
+        [Test]
+        public void Verify_Prime_Factors_Of_A_Test_Case()
+        {
+            long solution = PrimeFactorCalculator.GetLargestPrimeFactor(2520);
+
+            Assert.AreEqual(7, solution);
         }
     }
 }

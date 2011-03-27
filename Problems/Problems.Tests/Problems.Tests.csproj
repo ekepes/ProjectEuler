@@ -45,6 +45,8 @@
   <ItemGroup>
     <Compile Include="ProblemFiveTests.cs" />
     <Compile Include="ProblemFourTests.cs" />
+    <Compile Include="ProblemSevenTests.cs" />
+    <Compile Include="ProblemSixTests.cs" />
     <Compile Include="ProblemThreeTests.cs" />
     <Compile Include="Utilities\FibonacciSeriesCalculatorTests.cs" />
     <Compile Include="ProblemOneTests.cs" />

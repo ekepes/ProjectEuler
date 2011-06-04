@@ -1,11 +1,10 @@
-using System;
 using System.Collections.Generic;
 
-namespace Problems.Tests
+namespace Problems
 {
     public class ProblemSeven
     {
-        private static List<long> _Primes = new List<long> {2, 3, 5, 7};
+        private static readonly List<long> _Primes = new List<long> {2, 3, 5, 7};
 
         private static void FindPrimesUpToOrdinal(int numberOfPrimes)
         {
@@ -17,7 +16,7 @@ namespace Problems.Tests
                     bool isPrime = true;
                     foreach (long prime in _Primes)
                     {
-                        if (candidate % prime == 0)
+                        if (candidate%prime == 0)
                         {
                             isPrime = false;
                             break;

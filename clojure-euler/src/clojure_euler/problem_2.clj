@@ -1,3 +1,9 @@
+; To run:
+;
+; start the repl (lein repl)
+; (use 'clojure-euler.problem-2)
+; (solve-2)
+
 (ns clojure-euler.problem-2
   (:gen-class))
 
@@ -22,7 +28,7 @@
   [limit] 
   (reduce + (get-evens limit)))
 
-(defn solve 
+(defn solve-2
   "solves the Project Euler problem"
   [] 
   (find-sum 4000000))

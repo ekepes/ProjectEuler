@@ -21,5 +21,6 @@ module Common =
         | Some factor -> factor :: Factors (value / factor)
         | None -> [value]
 
+    // Use pown instead, leaving this here just because I figured it out and am stupidly proud of it
     let pow value exponent = 
         List.fold (fun acc elem -> acc * value) 1 [1..exponent] 

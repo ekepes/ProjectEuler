@@ -1,1 +1,12 @@
-﻿<Properties StartupItem="Solutions/Solutions.fsproj" />
+﻿<Properties StartupItem="Solutions/Solutions.fsproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Solutions/Common.fs">
+    <Files>
+      <File FileName="Solutions/Common.fs" Line="5" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

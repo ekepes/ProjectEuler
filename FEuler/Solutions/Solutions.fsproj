@@ -50,5 +50,6 @@
     <None Include="Euler004.fsx" />
     <None Include="Euler005.fsx" />
     <None Include="ScratchPad.fsx" />
+    <None Include="Euler006.fsx" />
   </ItemGroup>
 </Project>

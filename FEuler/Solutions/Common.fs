@@ -22,9 +22,12 @@ module Common =
         | None -> [value]
 
     let IsPrime x =
-        match Seq.tryFind (fun i -> x % i = 0) {2..(x-1)} with
-            | Some factor -> false
-            | None -> true
+        match x with
+        | 1 -> false
+        | 2 -> true
+        | _ -> match Seq.tryFind (fun i -> x % i = 0) {2..((x/2)+1)} with
+                | Some factor -> false
+                | None -> true
 
     // Use pown instead, leaving this here just because I figured it out and am stupidly proud of it
     let pow value exponent = 

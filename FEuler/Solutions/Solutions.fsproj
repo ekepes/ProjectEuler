@@ -53,5 +53,7 @@
     <None Include="Euler006.fsx" />
     <None Include="Euler007.fsx" />
     <None Include="Euler008.fsx" />
+    <None Include="Euler009.fsx" />
+    <None Include="MontyHallProof.fsx" />
   </ItemGroup>
 </Project>

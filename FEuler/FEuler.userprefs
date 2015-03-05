@@ -1,12 +1,9 @@
 ﻿<Properties StartupItem="Solutions/Solutions.fsproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Solutions/Common.fs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Solutions/Euler010.fsx">
     <Files>
-      <File FileName="Solutions/Common.fs" Line="36" Column="36" />
-      <File FileName="Solutions/Euler005.fsx" Line="1" Column="1" />
-      <File FileName="Solutions/Euler004.fsx" Line="49" Column="49" />
-      <File FileName="Solutions/Euler002.fsx" Line="1" Column="1" />
-      <File FileName="Solutions/Euler006.fsx" Line="5" Column="5" />
+      <File FileName="Solutions/Euler010.fsx" Line="22" Column="22" />
+      <File FileName="Solutions/ScratchPad.fsx" Line="34" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

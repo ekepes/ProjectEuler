@@ -8,7 +8,7 @@ type Outcome =
 
 let doors = {0..2}
 
-let trials = 100
+let trials = 1000
 
 let rnd = System.Random()
 

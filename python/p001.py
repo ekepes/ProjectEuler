@@ -12,4 +12,4 @@ def solveFor(value):
 
   return total
 
-print solveFor(1000)
+print "The solution for 1000 is %d." % solveFor(1000)

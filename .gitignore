@@ -23,3 +23,5 @@ TestResult.xml
 submit.xml
 src/tests/*
 SolutionVersion.cs
+
+*.pyc

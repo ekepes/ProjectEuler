@@ -12,11 +12,11 @@ def largestNumberWithDigits(value):
 
 def solve(value):
   start = largestNumberWithDigits(value)
-  finish = int(start / 2)
+  finish = start - largestNumberWithDigits(value - 1)
   result = 0
 
   for first in range(start, finish, -1):
-    for second in range(start, finish, -1):
+    for second in range(first, finish, -1):
       trial = first * second
       if isPalindrome(trial) and trial > result:
         result = trial

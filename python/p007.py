@@ -1,6 +1,10 @@
 primes = [2, 3, 5, 7]
 
 def GetnthPrime(n):
+  if n <= 0:
+    print ("Sequences cannot have 0 or less elements.")
+    return 0
+
   while len(primes) < n:
     candidate = primes[-1]
     foundPrime = False

@@ -1,3 +1,6 @@
+import time
+startTime = time.time()
+
 #pyramid = ["03",
 #  "07 04",
 #  "02 04 06",
@@ -73,3 +76,4 @@ def findMax(nodes):
   return largest
 
 print(findMax(parsePyramid(pyramid)))
+print("Run Time = " + str(time.time() - startTime))

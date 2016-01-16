@@ -34,28 +34,26 @@ def calculateCummulativeWeight(weight, row, column, nodes):
 def getKey(row, column):
   return row * 1000 + column
 
-def parseLine(row, line, nodes):
+def parseLine(row, line, nodes, currentMaxWeight):
   lineNodes = {}
   column = 0
   for item in line.split():
-    lineNodes[getKey(row, column)] = calculateCummulativeWeight(item, row, column, nodes)
+    weightAtNode = calculateCummulativeWeight(item, row, column, nodes)
+    lineNodes[getKey(row, column)] = weightAtNode
+    if weightAtNode > currentMaxWeight:
+      currentMaxWeight = weightAtNode
     column += 1
-  return lineNodes
+  return lineNodes, currentMaxWeight
 
 def parsePyramid(pyramid):
   nodes = {}
   row = 0
+  currentMaxWeight = 0
   for line in pyramid:
-    nodes.update(parseLine(row, line, nodes))
+    lineNodes, currentMaxWeight = parseLine(row, line, nodes, currentMaxWeight)
+    nodes.update(lineNodes)
     row += 1
-  return nodes
+  return currentMaxWeight
 
-def findMax(nodes):
-  largest = 0
-  for n in nodes:
-    if nodes[n] > largest:
-      largest = nodes[n]
-  return largest
-
-print(findMax(parsePyramid(pyramid)))
+print(parsePyramid(pyramid))
 print("Run Time = " + str(time.time() - startTime))

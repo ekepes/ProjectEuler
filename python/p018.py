@@ -1,7 +1,7 @@
-pyramid = ["3",
-  "7 4",
-  "2 4 6",
-  "8 5 9 3"]
+pyramid = ["03",
+  "07 04",
+  "02 04 06",
+  "08 05 09 03"]
 
 class Node(object):
   def __init__(self, weight, row, column, nodes):
@@ -49,6 +49,11 @@ def parsePyramid(pyramid):
     row += 1
   return nodes
 
-nodes = parsePyramid(pyramid)
-for n in nodes:
-  print(n, nodes[n])
+def findMax(nodes):
+  largest = 0
+  for n in nodes:
+    if nodes[n].getCumWeight() > largest:
+      largest = nodes[n].getCumWeight()
+  return largest
+
+print(findMax(parsePyramid(pyramid)))

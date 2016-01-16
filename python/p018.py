@@ -21,19 +21,15 @@ pyramid = ["75",
   "63 66 04 68 89 53 67 30 73 16 69 87 40 31",
   "04 62 98 27 23 09 70 98 73 93 38 53 60 04 23"]
 
-
-class Node(object):
-  def __init__(self, weight, row, column, nodes):
-    left = 0
-    right = 0
-    if row > 0:
-      if column < row:
-        right = int(nodes[getKey(row-1, column)].getCumWeight())
-      if column > 0:
-        left = int(nodes[getKey(row-1, column-1)].getCumWeight())
-    self.cumWeight = int(weight) + max(left, right)
-  def getCumWeight(self):
-    return self.cumWeight
+def calculateCummulativeWeight(weight, row, column, nodes):
+  left = 0
+  right = 0
+  if row > 0:
+    if column < row:
+      right = int(nodes[getKey(row-1, column)])
+    if column > 0:
+      left = int(nodes[getKey(row-1, column-1)])
+  return int(weight) + max(left, right)
 
 def getKey(row, column):
   return row * 1000 + column
@@ -42,7 +38,7 @@ def parseLine(row, line, nodes):
   lineNodes = {}
   column = 0
   for item in line.split():
-    lineNodes[getKey(row, column)] = Node(item, row, column, nodes)
+    lineNodes[getKey(row, column)] = calculateCummulativeWeight(item, row, column, nodes)
     column += 1
   return lineNodes
 
@@ -57,8 +53,8 @@ def parsePyramid(pyramid):
 def findMax(nodes):
   largest = 0
   for n in nodes:
-    if nodes[n].getCumWeight() > largest:
-      largest = nodes[n].getCumWeight()
+    if nodes[n] > largest:
+      largest = nodes[n]
   return largest
 
 print(findMax(parsePyramid(pyramid)))

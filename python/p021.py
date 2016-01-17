@@ -1,4 +1,6 @@
 from functools import reduce
+import time
+startTime = time.time()
 
 def factors(n):
   result = set(reduce(list.__add__,
@@ -22,3 +24,4 @@ for i in range(2, 10000):
       total += i
 
 print(total)
+print("Run Time = " + str(time.time() - startTime))

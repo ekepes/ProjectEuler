@@ -1,3 +1,6 @@
+import time
+startTime = time.time()
+
 def factorial(x):
   if x == 1:
     return 1
@@ -9,3 +12,4 @@ for d in digits:
   total += int(d)
 
 print(total)
+print("Run Time = " + str(time.time() - startTime))

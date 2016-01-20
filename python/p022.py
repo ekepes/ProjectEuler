@@ -1,8 +1,9 @@
 import time
 startTime = time.time()
 
-'''
-Put solution here...
-'''
+f = open('p022_names.txt', 'r')
+data = f.read()
+
+print(data)
 
 print("Run Time = " + str(time.time() - startTime))

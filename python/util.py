@@ -30,3 +30,17 @@ def fib(n):
     return 1
   else:
     return fib(n-1) + fib(n-2)
+
+def primes(upperBound):
+  sieve = [0] * upperBound
+  value = 3
+  primeList = []
+  while value < upperBound:
+      if sieve[value] == 0:
+          primeList.append(value)
+          i = value
+          while i < upperBound:
+              sieve[i] = 1
+              i += value
+      value += 2
+  return primeList
